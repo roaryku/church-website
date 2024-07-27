@@ -1,0 +1,117 @@
+.containerAboutAcc{
+    background-color: #f5ede8;
+}
+
+.accordion .item {
+    border: 0;
+    border-radius: 0;
+    padding: 45px 25px;
+}
+.accordion:last-child .item {
+    border-bottom: 2px solid black;
+}
+
+.accordion .item .accordion-header button {
+    background-color: transparent ;
+    box-shadow: none;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 25px;
+    font-weight: 700;
+    vertical-align: middle;
+    position: relative;
+    font-family: "Lato", sans-serif;
+    color: #0F222D;
+    
+
+}
+.accordion .item button{
+    color: #fcfbfa;
+}
+.accordion .item .accordion-header button::after{
+    transition: all .6 ease;
+}
+.accordion .item .accordion-collapse{
+    transition: all .4s ease;
+}
+.accordionImageOne{
+    margin-bottom: 25px;
+}
+.name{
+    border-radius: 30%;
+    margin-top: 40px;
+    font-family: "Lato", sans-serif;
+    color: #2E2836;
+}
+.accordionName{
+    font-size: 25px;
+    margin-top: 15px;
+    font-style: italic;
+    font-family: "Lato", sans-serif;
+    color: #2E2836;
+}
+.ourTeam{
+    margin-top: 50px;
+    font-family: "Lato", sans-serif;
+    color: #2E2836;
+}
+.cardBody{
+    margin: 30px;
+    font-family: "Lato", sans-serif;
+    color: #2E2836;
+}
+.accordionTeam{
+    margin-top: 90px;
+    font-family: "Lato", sans-serif;
+    color: #2E2836;
+}
+.cardInfo{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: "Lato", sans-serif;
+    color: #2E2836;
+}
+.card{
+    margin: 20px;
+} 
+.bodyAccordion{
+    background-image: url(/src/photos/bible.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aboutUsHeader{
+    text-align: center;
+    margin: 30px;
+    font-family: "Lato", sans-serif;
+    color: #0F222D;
+    font-size: 40px;
+}
+.youthBody{
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+.Youth-services{
+    font-family: "Lato", sans-serif;
+    color: rgba(93, 5, 5, 0.709);
+    font-size: 30px; 
+}
+.par-ministry{
+    font-family: "Lato", sans-serif;
+    color: #0F222D;
+    font-size: 20px;
+}
+.par-ministry-time{
+    font-family: "Lato", sans-serif;
+    color: #ae0a2b;
+    font-size: 20px;
+}
+h2{
+    font-family: "Lato", sans-serif;
+    color: #0F222D;
+    font-weight: bold;
+}

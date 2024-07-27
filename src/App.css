@@ -1,38 +1,397 @@
-.App {
+
+.AppContainer{
+  background-color: #f8f9fb;
+}
+/* .menuHeader{
+  margin-top: -20px;
+} */
+.navBtn{
+  margin-right: 20px;
+}
+.header{
+  text-align: center;
+  color: #EBE7D9;
+  background-color: #0F222D;
+  padding: 10px;
+  font-style: italic;
+  font-family: "Lato", sans-serif;
+}
+.link{
+  font-family: "Lato", sans-serif;
+  font-size: 25px;
+  color: #0F222D;
+}
+.headerAbout{
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  color: #0F222D;
+  padding: 10px;
+  font-size: 40px;
+  margin-top: 30px;
+}
+.headerInfo{
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  color: #644334;
+  padding: 10px;
+  font-size: 30px;
+}
+.churchLogo{
+  width: 100px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+.homeAboutContainer{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  background-color: #f8f9fb;
+}
+.baptismContainer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f8f9fb;
+}
+.headerHomeAbout{
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  margin: 50px;
+}
+.headerHomeEvent{
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  padding: 50px;
+  margin-top: 60px;
+}
+.ourBeliefs{
+  text-align: center;
+  padding: 50px;
+  margin-top: 60px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  background-color: rgba(225, 225, 225, .5);
+}
+.headerHomeBaptism{
+  text-align: center;
+  padding: 50px;
+}
+h3{
+  font-family: "Lato", sans-serif;
+  color: #0F222D;
+}
+.par-about{
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  color: #0F222D;
+}
+.events{
+  font-family: "Lato", sans-serif;
+  color: #0F222D;
+  font-size: 20px;
+}
+.eventsTwo{
+  font-family: "Lato", sans-serif;
+  color: #0F222D;
+  font-size: 20px;
+}
+.par-events{
+  font-family: "Lato", sans-serif;
+  color: #0F222D;
+  font-size: 20px;
+}
+.hrEvent{
+  color:  #000305;
+}
+.homeBtn{
+  font-family: "Lato", sans-serif;
+  background-color: #0F222D;
+  color: #f8f9fb;
+  padding: 10px;
+  border: none;
+  font-size: 20px;
+}
+.homeBtn:hover{
+  background-color: #f8f9fb;
+  border: 2px solid #0F222D;
+  color: #0F222D;
+}
+/* .baptismImage{
+  border: 20px solid #0F222D;
+  border-left: 30px solid #f8f9fb; 
+   border-right: 5px solid #f8f9fb;
+} */
+ .aboutImageCross{
+  width: 500px;
+ }
+
+.AboutUsContainer{
+  display: flex;
+  justify-content: space-around;
+}
+.AboutContainer{
+  background-image: url(../src/photos/bible.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.headerEvents{
+  display: flex;
+  justify-content: space-between;
+  background-color: #000305;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+.eventBtn{
+  background-color: #f8f9fb;
+  padding: 10px;
+  border: none;
+  color: #000305;
+  font-family: "Lato", sans-serif;
+}
+.eventImageHeader{
+  width: 800px;
+}
+.cardNamesInfo{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+.personalInfo{
+  padding: 10px;
+}
+.eventLocation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+}
+.iFrameMap{
+  margin: 60px;
+  width: 500px;
+  height: 300px;
+}
+.formToContact{
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+.contactBody{
+  background-image: url(../src/photos/bible.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contactButtons{
+  margin: 50px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+}
+.contactHeader{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(225, 225, 225, .7);
+  width: 100%;
+  margin: 10px;
+}
+.StaffHeaderContact{
+  background-color: rgba(225, 225, 225, .7);
+  width: 100%;
+}
+.churchPersonalInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.phoneNumber{
+  /* color: #000305; */
+  color: #112511;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  margin: 5px;
+  text-align: center;
+}
+.contactLocation{
+  color: #112511;
+  font-family: "Lato", sans-serif;
+  font-weight: lighter;
+}
+.STime{
+  color: rgba(93, 5, 5, 0.709);
+}
+
+.adressInfo{
+  text-align: center;
+  padding: 50px;
+  margin-top: 60px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
+.InfoUpdateContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contactbtn{
+  margin: 10px;
+}
+.contactBackBtn{
+  margin: 20px;
+}
+form{
+  width: 60%;
+  margin: 60px;
+  font-family: "Lato", sans-serif;
+  color: #112511;
+}
+.parInfo{
+  font-family: "Lato", sans-serif;
+  color: #112511;
+  text-align: center;
+  font-size: 35px;
+}
+.membersInfo{
+  font-size: 20px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  color: rgba(93, 5, 5, 0.709);
+}
+.invitation{
+  font-family: "Lato", sans-serif;
+  color: #112511;
+  text-align: center;
+}
+.invitationInfo{
+  font-family: "Lato", sans-serif;
+  color: rgba(93, 5, 5, 0.709);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* .lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+} */
+
+
+@media all and ( max-width: 800px){
+  .homeAboutContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+  }
+  .baptismContainer{
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutImageCross{
+    width: 300px;
+   }
+  .headerEvents{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .eventImageHeader{
+    width: 500px;
+  }
+  .iFrameMap{
+    width: 300px;
+  }
+  .churchPersonalInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  form{
+    width: 100%;
+    padding: 10px;
+  }
+  .homeBtn{
+    margin-bottom: 30px;
+  }
+
+}
+
+@media all and ( max-width: 500px){
+  .homeAboutContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+  }
+  .baptismContainer{
+    display: flex;
+    flex-direction: column;
+  }
+  .iFrameMap{
+    width: 250px;
+    height: 200px;
+    margin: 0px;
+    align-self: center;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+

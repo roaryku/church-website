@@ -1,0 +1,112 @@
+.section_padding {
+    padding: 4rem 4rem;
+}
+.footer{
+    background-color: #0F222D;
+}
+.sb_footer{
+    display: flex;
+    flex-direction: column;
+}
+.sb_footer-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+.sb_footer-links div{
+    width: 150px;
+    margin: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: #EBE7D9;
+    flex-wrap: wrap;
+}
+
+a{
+    /* color: rgb(175, 175, 179); */
+    color: #EBE7D9;
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+}
+.socialmedia{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.sb_footer-links_div{
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0.5rem 0;
+    cursor: pointer;
+}
+.sb_footer-below{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0.2rem;
+    flex-wrap: wrap;
+}
+.sb_footer-below-links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.sb_footer-below-links p {
+    font-size: 13px;
+    line-height: 15px;
+    margin-left: 2rem;
+    color: #EBE7D9;
+    font-weight: 600px;
+    font-family: "Lato", sans-serif;
+}
+hr{
+    color: #EBE7D9 !important;
+    width: 100%;
+}
+.sb_footer-copyright p{
+    font-size: 13px;
+    line-height: 15px;
+    color: #EBE7D9;
+    /* color: rgb(225, 225, 225); */
+    font-weight: 600;
+    font-family: "Lato", sans-serif;
+}
+.icon{
+    background-color: #EBE7D9;
+    width: 40px;
+    border-radius: 2px;
+    margin: 10px;
+    font-family: "Lato", sans-serif;
+}
+.youTubeIcon{
+    background-color: #EBE7D9;
+    width: 40px;
+    border-radius: 2px;
+    font-family: "Lato", sans-serif;
+}
+h4{
+    font-family: "Lato", sans-serif;
+}
+
+
+@media all and (max-width: 800){
+   .sb_footer-heading h1{
+        font-size: 44px;
+        line-height: 50px;
+    }
+}
+
+@media all and (max-width: 500){
+ 
+}
+
+@media all and (max-width: 400){
+   
+}

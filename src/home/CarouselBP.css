@@ -1,0 +1,45 @@
+ .image-carousel{
+    width: 100%;
+    /* height: 100vh; */
+    background-color: none;
+    color: #0F222D;
+  }
+  .slideCaption{
+    color: #EBE7D9;
+    font-weight: bolder;
+    background-color: rgba(0, 0, 0, .3);
+    padding: 5px;
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+  }
+  .parCarus{
+    color: #EBE7D9;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, .3);
+    padding: 15px;
+    margin-top: -8px;
+    font-family: "Lato", sans-serif;
+  }
+  .carousel-indicators [data-bs-target] {
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+  }
+  * {
+    background-color: transparent;
+   }
+
+
+  @media all and ( max-width: 800px){
+    .image-carousel{
+        width: 100%;
+        height: 50vh;
+      }
+  }
+
+  @media all and ( max-width: 500px){
+    .image-carousel{
+        width: 100%;
+        height: 40vh;
+      }
+  }
