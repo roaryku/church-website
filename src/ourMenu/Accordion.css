@@ -1,0 +1,125 @@
+.bodyAccordion{
+    background-image: url(../menu_photos/menu_background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+.accordion .item {
+    border: 0;
+    border-radius: 0;
+    padding: 45px 25px;
+}
+.accordion:last-child .item {
+    border-bottom: 2px solid black;
+}
+
+.accordion .item .accordion-header button {
+    background-color: transparent ;
+    box-shadow: none;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 25px;
+    font-weight: 700;
+    vertical-align: middle;
+    position: relative;
+    font-family: "Lato", sans-serif;
+    color: #0F222D;
+    
+
+}
+.accordion .item {
+    background-color: rgba(255, 255, 255, 0.842);
+    backdrop-filter: blur(2px);
+}
+
+.accordion .item .accordion-header button::after{
+    transition: all .6 ease;
+}
+.accordion .item .accordion-collapse{
+    transition: all .4s ease;
+}
+.card{
+    margin: 20px;
+} 
+
+.aboutUsHeader{
+    text-align: center;
+    font-weight: bold;
+    margin: 30px;
+    font-family: "Lato", sans-serif;
+    color: #542309;
+    font-size: 40px;
+}
+.menuCardsRow{
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+
+.accordion .item .AccordionNameTitles .accordion-button {
+  color: rgba(133, 36, 36, 0.941);
+  font-size: 25px;
+  font-family: "Lato", sans-serif;
+}
+.menuTitle{
+    font-style: italic;
+    color: #0F222D;
+    font-weight: bolder;
+    font-family: "Lato", sans-serif;
+}
+.priceAndSpecials{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.thePrice{
+    color: #dc0707;
+}
+.oldPrice{
+    color: #dc070798;
+    text-decoration: line-through;
+}
+.salePrice {
+    color: green;
+    font-weight: 700;
+}
+.bestSeller {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #6b2d1a;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+}
+.newSeller{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #2b870f;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+}
+.saleSeller{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #c34343;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+}

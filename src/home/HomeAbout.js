@@ -1,6 +1,6 @@
-import image from '../photos/cross.png';
-import image2 from '../photos/church.png';
-import image3 from '../photos/baptism.png';
+import image from '../photos/building1.png';
+import image2 from '../photos/bread-board.png';
+import image3 from '../photos/bakery_inside.png';
 import { useTranslation } from 'react-i18next';
 
 
@@ -10,13 +10,13 @@ function HomeAbout () {
 
     return (
         <div>
-        <div className='homeAboutContainer'>
+        <div className='homeAboutContainer homeAboutFirstMobile'>
             <div className='headerHomeAbout'>
-                <img src={image} className='aboutImageCross' alt='cross' width='300'/>
+                <img src={image} className='aboutImageBread' alt='cross' width='300' height="420"/>
             </div>
             <div className='headerHomeAbout'>
-                <h3>{t ('HomeAboutHeader')}</h3>
-                <hr/>
+                <h3 className='homePageTitles'>{t ('HomeAboutHeader')}</h3>
+                <hr className='hrEvent'/>
                 <p className='par-about'>{t ('HomeAboutPar')}</p>
 
                 <a href='/about'>
@@ -25,49 +25,43 @@ function HomeAbout () {
             </div>
         </div>
 
-        <div className='homeAboutContainer'>
+        <div className='homeAboutContainer homeAboutSecondMobile'>
             <div className='headerHomeAbout'>
-            <h3>{t ('HomeServicesHead')}</h3>
-                <hr/>
+            <h3 className='homePageTitles'>{t ('HomeServicesHead')}</h3>
+                <hr className='hrEvent'/>
                 <h4 className='par-services'>{t ('ServicesHomePar')}</h4>
                 <p>{t ('ServiceDetailOne')}</p>
                 <hr/>
-                <h4 className='par-services'>{t ('PrayerHomeTime')}</h4>
-                <p>{t ('PrayerTimeDetailsOne')}</p>
-                <p>{t ('PrayerTimeDetailsTwo')}</p>
+                <h4 className='par-services'>{t ('WeekendTime')}</h4>
+                <p>{t ('SaturdayWorkTime')}</p>
+                <p>{t ('SundayClosed')}</p>
+                <a href='/ourMenu'>
+                <button className='homeBtn'>{t ('CheckMenu')}</button>
+                </a>
             </div>
             <div className='headerHomeAbout'>
-                <img src={image2} className='aboutImageCross' alt='cross' width='400'/>
+                <img src={image2} className='aboutImageBread' alt='cross' width='300' height="400"/>
             </div>
         </div>
 
-        <div className='baptismContainer'>
-            <div className='headerHomeBaptism'>
-            <img src={image3} className='baptismImage' alt='cross' width='100%'/>
+        <div className='homeDescriptionContainer homeDescriptionThirdMobile'>
+            <div className='headerHomeDescription'>
+            <img src={image3} className='homeDescriptionImage' alt='cross' width='400' height="400"/>
             </div>
-            <div className='headerHomeBaptism'>
-                 <h3 className='eventsTwo'>{t ('BibleBerseBaptismHome')}</h3>
+            <div className='headerHomeDescription'>
+                <h3 className='homePageTitles'>{t ('EnjoyHome')}</h3>
                 <hr className='hrEvent'/>
-                <h4 className='par-events'>{t ('BaptismHome')}</h4>
-                <h5 className='events'>{t ('BTimeHome')}</h5>
-                <p className='events'>{t ('BLocationHome')}</p>
+                <p className='eventsTwo'>{t ('FreshEveryDescription')}</p>
+                <h5 className='events'>{t ('EnjoyTimeHome')}</h5> 
+                <p className='events'>{t ('LocationHome')}</p>
            
-                <a href='/events'>
-                <button
-                 className='homeBtn'>{t ('BaptismHomeBtn')}</button>
+                 <a href='/gallery'>
+                  <button
+                 className='homeBtn'>{t ('DirectionHomeBtn')}</button>
                </a>
             </div>
         </div>
         </div>
-
-
-
-
-
-
-
-
-        
-    )
+)
 }
 export default HomeAbout;

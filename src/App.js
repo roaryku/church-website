@@ -10,7 +10,7 @@ function App() {
   const { i18n, t} = useTranslation()
 
   const toggleLang = () => {
-    i18n.changeLanguage(i18n.language === 'en' ? 'ro' : 'en')
+    i18n.changeLanguage(i18n.language === 'en' ? 'uk' : 'en')
   }
 
 

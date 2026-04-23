@@ -1,6 +1,5 @@
-import React from "react";
 import './Footer.css';
-import logoFooter from '../photos/Preview.png';
+import logo from '../photos/Preview.png';
 import iconCallNow from '../photos/call-now.png';
 import iconYouTube from '../photos/you tube.png';
 import mapIcon from '../photos/mapIcon.png';
@@ -16,27 +15,27 @@ function Footer () {
             <div className="sb_footer section_padding">
                 <div className="sb_footer-links">
                     <div className="sb_footer-links-div">
-                       <img src={logoFooter} alt="you tube" width="120"/>
+                       <img src={logo} className="businessLogo" alt="you tube" width="120"/>
                     </div>
 
                     <div className="sb_footer-links_div">
                        <h4>{t ('FooterLocation')}</h4>
-                       <a href="https://www.google.com/maps/place/Philadelphia+Romanian+Church/@45.6418986,-122.6387748,17z/data=!3m1!4b1!4m6!3m5!1s0x5495af6a35671d27:0xb3c79a8d425bacc5!8m2!3d45.6418986!4d-122.6361999!16s%2Fg%2F1tczvng8?entry=ttu">
+                    <a href="https://www.google.com/maps/place/125+Main+St,+Atlanta,+GA+30305/@33.7490,-84.3880,17z" rel="noopener noreferrer" target="_blank">
                          <img src={mapIcon} alt="you tube" className="icon"/>
                        </a>
                     </div>
 
                 <div className="sb_footer-links_div">
                     <h4>{t ('FooterContact')}</h4>
-                      <a href="tel: +13606956766" target>
+                                            <a href="tel: +4045550172" rel="noopener noreferrer" target="_blank">
                          <img src={iconCallNow} alt="phone" className="icon"/> 
                       </a>
                   </div>
 
                 <div className="sb_footer-links_div">
                   <h4>{t ('FooterFallow')}</h4>
-                 <div className="socialmedia">
-                 <a href="https://www.youtube.com/c/PhiladelphiaVancouvercurch" target>
+                 <div className="socialMedia">
+                 <a href="https://www.youtube.com" rel="noopener noreferrer" target="_blank">
                        <img src={iconYouTube} className="youTubeIcon" alt="you tube"/>
                     </a>
 
@@ -48,14 +47,17 @@ function Footer () {
             <div className="sb_footer-below">
                 <div className="sb_footer-copyright">
                     <p>
-                        @{new Date().getFullYear()}  {t ('FooterWriths')}
+                        @{new Date().getFullYear()}  {t ('FooterRights')}
                     </p>
+                    <a href='https://design2codestudio.netlify.app/' target="_blank" rel="noopener noreferrer">
+                    <p className='FooterMadeBy'>{t ('FooterMadeBy')}</p>
+                    </a>
                 </div>
                 <div className="sb_footer-below-links">
-                    <a href="/home"><div><p>{t ('Home')}</p></div></a>
+                    <a href="/"><div><p>{t ('Home')}</p></div></a>
+                    <a href="/ourMenu"><div><p>{t ('OurMenu')}</p></div></a>
+                    <a href="/gallery"><div><p>{t ('Gallery')}</p></div></a>
                     <a href="/about"><div><p>{t ('About')}</p></div></a>
-                    <a href="/ministries"><div><p>{t ('Ministries')}</p></div></a>
-                    <a href="/events"><div><p>{t ('Events')}</p></div></a>
                     <a href="/contact"><div><p>{t ('Contact')}</p></div></a>
                 </div>
             </div>

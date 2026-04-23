@@ -1,47 +1,183 @@
-import ContactButton from "./ContactButton";
-import image from '../photos/call-now.png'
+import React from 'react';
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import image from '../photos/call-now.png';
 import email from '../photos/email.png';
 import { useTranslation } from 'react-i18next';
+import { addStaffForm } from './FetchStaffForm';
 
 function Contact () {
-
     const { t } = useTranslation();
+    const [validated, setValidated] = useState(false);
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [emailAddress, setEmailAddress] = useState('');
+    const [message, setMessage] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const form = event.currentTarget;
+
+        if (form.checkValidity() === false) {
+            event.stopPropagation();
+            setValidated(true);
+            return;
+        }
+
+        setValidated(true);
+        setIsSubmitting(true);
+        setShowSuccessPopup(false);
+
+        try {
+            await addStaffForm(firstName, lastName, emailAddress, message);
+            setFirstName('');
+            setLastName('');
+            setEmailAddress('');
+            setMessage('');
+            setValidated(false);
+            setShowSuccessPopup(true);
+            form.reset();
+        }
+         finally {
+            setIsSubmitting(false);
+        }
+    };
 
     return (
+        <React.Fragment>
         <div className="contactBody">
             <div className="contactHeader">
-               <h2 className='headerAbout'>{t ('Contact us')}</h2>
-               <ContactButton/>
+               <h2 className='contactAbout'>{t ('ContactUs')}</h2>
 
-               <h4 className='headerInfo'>{t ('Contact homeInfo')}</h4>
-               <div className="churchPersonalInfo">
+              <div className='contactContent'>
+               <div className='InfoUpdateContainer contactFormSection'>
+                <h4 className='contactSectionTitle'>{t ('ContactForm')}</h4>
 
-                <div className="phoneContact">
-                <a href="tel: +13604331716" className="phoneNumber">
-                    <p>{t ('Call us')}</p>
-                    <img src={image} width="25" alt="icon"/>
-                   +1.360.695.6766</a>
+                <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                 <Row>
+                  <Col>
+                   <Form.Label className="mb-3" htmlFor="contactFormFirstName">{t ('FirstName')}</Form.Label>
+                   <Form.Control
+                      id="contactFormFirstName"
+                      value={firstName}
+                      onChange={(event) => setFirstName(event.target.value)}
+                      placeholder={t ('FirstName')}
+                      required
+                      type='text'
+                   />
+                   <Form.Control.Feedback type="invalid">
+                    Information required.
+                   </Form.Control.Feedback>
+                  </Col>
+
+                  <Col>
+                   <Form.Label className="mb-3" htmlFor="contactFormLastName">{t ('LastName')}</Form.Label>
+                   <Form.Control
+                      id="contactFormLastName"
+                      value={lastName}
+                      onChange={(event) => setLastName(event.target.value)}
+                      placeholder={t ('LastName')}
+                      required
+                      type='text'
+                   />
+                   <Form.Control.Feedback type="invalid">
+                    Information required.
+                   </Form.Control.Feedback>
+                  </Col>
+                 </Row>
+                 <br></br>
+
+                 <Form.Group className="mb-4" controlId="contactFormEmail">
+                     <Form.Label>{t ('EmailAddress')}</Form.Label>
+                     <Form.Control
+                     value={emailAddress}
+                     onChange={(event) => setEmailAddress(event.target.value)}
+                     type="email"
+                     placeholder={t ('EmailAddress')}
+                     required
+                     />
+                     <Form.Control.Feedback type="invalid">
+                      Information required.
+                     </Form.Control.Feedback>
+                 </Form.Group>
+
+                 <Form.Group className="mb-3" controlId="contactFormMessage">
+                     <Form.Label>{t ('TypeYourMessage')}</Form.Label>
+                     <Form.Control
+                     as="textarea"
+                     rows={3}
+                     placeholder={t ('TypeYourMessage')}
+                     required
+                     value={message}
+                     onChange={(event) => setMessage(event.target.value)}
+                     />
+                     <Form.Control.Feedback type="invalid">
+                      Information required.
+                     </Form.Control.Feedback>
+                 </Form.Group>
+
+                 <div className='contactSubmitButton'>
+                  <Button type="submit" disabled={isSubmitting}>
+                      {t ('SubmitForm')}
+                  </Button>
+                 </div>
+                </Form>
+               </div>
+
+               <div className='contactDetailsSection'>
+                <div className='addressInfo'>
+                 <h4 className='contactSectionTitle'>{t ('ContactEnjoyInvitation')}</h4>
+                 <p className="contactLocation STime">{t ('EnjoyTimeHome')}</p>
+                 <p className="contactLocation STime">{t ('SaturdayWorkTime')}</p>
+                 <p className="contactLocation STime">{t ('SundayClosed')}</p>
+                 <p className="contactLocation">{t ('LocationHome')}</p>
+                 <p className="contactLocation">{t ('GetDirectionOnContact')}</p>
+                 <iframe
+                  className='iFrameMap'
+                  title='google map'
+                  src="https://www.google.com/maps?q=125+Main+Street,+Atlanta,+GA+30305&output=embed"> 
+                  {t ('GetDirectionOnContact')}
+                 </iframe>
                 </div>
-
-                <div className="phoneContact">
-                <a href="mailto:rodikaaryku13@gmail.com" rel="_blank" className="phoneNumber">
-                <p>{t ('Send us an email')}</p>
-                    <img src={email} width="25" alt="icon"/> 
-                    philadelphiavchurch@gmail.com</a>
-                </div>
+               </div>
               </div>
 
-              <div className='adressInfo'>
-               <h4 className='headerInfo'>{t ('Worship with us')}</h4>
-               <p className="contactLocation STime">{t ('Contact service time')}</p>
-               <p className="contactLocation">3301 East 29th Street Vancouver, WA 98661-5007</p>
-               <p className="contactLocation">{t ('Get map direction')}</p>
-               <iframe className='iFrameMap'   title='google map'  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2789.4433375104545!2d-122.63880112413739!3d45.64191797107742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495af6a35b2d0f5%3A0xce01e5b18e9be738!2s3301%20E%2029th%20St%2C%20Vancouver%2C%20WA%2098661!5e0!3m2!1sen!2sus!4v1721922226724!5m2!1sen!2sus">
-               Click on the map to get direction
-               </iframe>
+              <h4 className='contactSectionTitle contactHomeInfoTitle'>{t ('ContactHomeInfo')}</h4>
+              <div className="churchPersonalInfo">
+               <div className="phoneContact">
+               <a href="tel: +4045550172" className="phoneNumber">
+                   <p className='contactInformation'>{t ('CallUs')}</p>
+                   <img src={image} width="25" alt="icon"/> 
+                  +1.404.555.0172</a>
+               </div>
+
+               <div className="phoneContact">
+               <a href="mailto:goldencrust.bakery@yahoo.com" rel="_blank" className="phoneNumber">
+               <p className='contactInformation'>{t ('SendUsAnEmail')}</p>
+                   <img src={email} width="25" alt="icon"/>  
+                   goldencrust.bakery@yahoo.com</a>
+               </div>
+              </div>
+            </div>
         </div>
-    </div>
-    </div>
+        {showSuccessPopup && (
+            <div className="contactSuccessPopupOverlay" role="dialog" aria-modal="true">
+                <div className="contactSuccessPopup">
+                    <div className="contactSuccessIcon" aria-hidden="true">v</div>
+                    <p className="contactSuccessText">Form submitted.</p>
+                    <Button variant="success" onClick={() => setShowSuccessPopup(false)}>
+                        OK
+                    </Button>
+                </div>
+            </div>
+        )}
+        </React.Fragment>
     )
 }
+
 export default Contact;
